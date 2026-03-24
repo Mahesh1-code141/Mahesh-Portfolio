@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mahesh_portfolio
+  name: mahesh-portfolio
 spec:
   type: LoadBalancer
   selector:
