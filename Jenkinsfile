@@ -30,6 +30,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 sh '''
+                aws eks --region us-east-1 update-kubeconfig --name mycluster
                 kubectl apply -f mahesh.yml
                 kubectl rollout status deployment/portfolio
                 '''
